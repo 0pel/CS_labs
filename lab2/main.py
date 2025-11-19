@@ -34,12 +34,12 @@ def fibonacci(n: int) -> list[int]:
 
 def bubble_sort[T: Comparable](lst: list[T]) -> list[T]:
     """
-       Сортирует список элементов методом пузырька.
-       :arg lst: Список элементов для сортировки. Элементы должны поддерживать сравнение.
-       :return: Новый отсортированный список. Исходный список не изменяется.
-       :raise ValueError: Если аргумент не является списком.
-       :raise TypeError: Если элементы в списке не поддерживают сравнение между собой.
-       """
+    Сортирует список элементов методом пузырька.
+    :arg lst: Список элементов для сортировки. Элементы должны поддерживать сравнение.
+    :return: Новый отсортированный список. Исходный список не изменяется.
+    :raise ValueError: Если аргумент не является списком.
+    :raise TypeError: Если элементы в списке не поддерживают сравнение между собой.
+    """
     if not isinstance(lst, list):
         raise ValueError("Аргумент должен быть списком")
 
@@ -68,11 +68,8 @@ def bubble_sort[T: Comparable](lst: list[T]) -> list[T]:
 def sieve_of_eratosthenes(n: int) -> list[int]:
     """
     Находит все простые числа до заданного числа n включительно с помощью решета Эратосфена.
-
     :arg n: Верхняя граница диапазона поиска простых чисел. Должно быть неотрицательным целым числом.
-
     :return: Список простых чисел от 2 до n. Для n < 2 возвращает пустой список.
-
     :raise ValueError: Если n не является целым положительным числом.
     """
     if not isinstance(n, int):
@@ -98,9 +95,11 @@ def sieve_of_eratosthenes(n: int) -> list[int]:
     primes = [num for num, is_prime in enumerate(sieve) if is_prime]
     return primes
 
+
 def main() -> None:
-    lst = [1,2,4,7,3,5]
+    lst = [1, 2, 4, 7, 3, 5]
     print(bubble_sort(lst))
+
 
 if __name__ == '__main__':
     main()
